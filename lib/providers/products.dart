@@ -102,7 +102,7 @@ class Products with ChangeNotifier {
         }),
       );
       final newProduct = Product(
-          id: DateTime.now().toString(),
+          id: json.decode(response.body)['name'],
           title: product.title,
           description: product.description,
           price: product.price,
